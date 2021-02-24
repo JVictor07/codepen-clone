@@ -3,23 +3,30 @@ import CodeMirror from "@uiw/react-codemirror";
 import "codemirror/addon/display/autorefresh";
 import "codemirror/addon/comment/comment";
 import "codemirror/addon/edit/matchbrackets";
-import "codemirror/keymap/sublime";
-import "codemirror/theme/monokai.css";
+import "codemirror/keymap/emacs";
+import "codemirror/theme/dracula.css";
 
-const EditorFilesBlock = ({ code, onChange, language }) => {
+import * as S from "./styles";
+
+const EditorFilesBlock = ({ code, onChange, language, blockTitle }) => {
   return (
-    <CodeMirror
-      value={code}
-      options={{
-        tabSize: 2,
-        mode: language,
-        theme: "monokai",
-        keyMap: "sublime",
-      }}
-      onChange={(editor) => {
-        onChange(editor.getValue());
-      }}
-    />
+    <S.EditorFilesBlock>
+      <S.EditorFilesBlockHeader>{blockTitle}</S.EditorFilesBlockHeader>
+      <CodeMirror
+        value={code}
+        height="100%"
+        options={{
+          tabSize: 2,
+          mode: language,
+          theme: "dracula",
+          keyMap: "emacs",
+          lineWrapping: true,
+        }}
+        onChange={(editor) => {
+          onChange(editor.getValue());
+        }}
+      />
+    </S.EditorFilesBlock>
   );
 };
 
@@ -27,6 +34,7 @@ EditorFilesBlock.propTypes = {
   code: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   language: PropTypes.string.isRequired,
+  blockTitle: PropTypes.string.isRequired,
 };
 
 export default EditorFilesBlock;

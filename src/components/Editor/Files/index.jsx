@@ -1,33 +1,40 @@
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
 import EditorFilesBlock from "./Block";
 
-const EditorFiles = ({ setCompleteCode }) => {
-  const [js, setJs] = useState("");
-  const [css, setCss] = useState("");
-  const [html, setHtml] = useState("");
+import * as S from "./styles";
 
-  useEffect(() => {
-    setCompleteCode(`
-      <html>
-        <body>${html}</body>
-        <style>${css}</style>
-        <script>${js}</script>
-      </html>
-    `);
-  }, [html, css, js]);
-
+const EditorFiles = ({ html, css, js, setHtml, setCss, setJs }) => {
   return (
-    <div>
-      <EditorFilesBlock code={html} language="HTML" onChange={setHtml} />
-      <EditorFilesBlock code={css} language="CSS" onChange={setCss} />
-      <EditorFilesBlock code={js} language="Javascript" onChange={setJs} />
-    </div>
+    <S.EditorFiles>
+      <EditorFilesBlock
+        code={html}
+        language="HTML"
+        blockTitle="HTML"
+        onChange={setHtml}
+      />
+      <EditorFilesBlock
+        code={css}
+        language="CSS"
+        blockTitle="CSS"
+        onChange={setCss}
+      />
+      <EditorFilesBlock
+        code={js}
+        blockTitle="JS"
+        onChange={setJs}
+        language="Javascript"
+      />
+    </S.EditorFiles>
   );
 };
 
 EditorFiles.propTypes = {
-  setCompleteCode: PropTypes.func.isRequired,
+  js: PropTypes.string.isRequired,
+  css: PropTypes.string.isRequired,
+  html: PropTypes.string.isRequired,
+  setJs: PropTypes.func.isRequired,
+  setCss: PropTypes.func.isRequired,
+  setHtml: PropTypes.func.isRequired,
 };
 
 export default EditorFiles;

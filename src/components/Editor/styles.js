@@ -2,6 +2,6 @@ import styled from 'styled-components'
 
 export const Editor = styled.div`
   display: flex;
+  height: 100vh;
   flex-direction: column;
-  border: 1px solid red;
 `

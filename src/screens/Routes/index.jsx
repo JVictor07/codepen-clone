@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "styled-components";
 import theme from "../../styles/theme";
+import GlobalStyle from "../../styles/global";
 
 import ScreensHome from "../Home";
 
@@ -23,6 +24,8 @@ const ScreensRoutes = () => (
         position="top-right"
         hideProgressBar={false}
       />
+
+      <GlobalStyle />
     </ThemeProvider>
   </Router>
 );

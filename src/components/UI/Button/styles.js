@@ -1,6 +1,18 @@
 import styled from 'styled-components'
 
 export const UIButton = styled.button`
+  color: #FFF;
+  display: flex;
+  font-size: 1rem;
   position: relative;
-  border: 1px solid red;
+  padding: 10px 16px;
+  border-radius: 4px;
+  align-items: center;
+  background: ${props => props.theme.colors.gray};
+
+  svg {
+    &, * {
+      stroke: ${props => props.theme.colors.textColor};
+    }
+  }
 `

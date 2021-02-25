@@ -1,4 +1,4 @@
-<h1>Wiser Test</h1>
+<h1>Codepen Clone</h1>
 
 <a href="https://simple-codepen.netlify.app/">Website Link</a>
 

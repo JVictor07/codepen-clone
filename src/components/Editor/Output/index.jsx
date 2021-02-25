@@ -7,6 +7,7 @@ const EditorOutput = ({ code }) => (
     srcDoc={code}
     title="output"
     frameBorder="0"
+    id="output-iframe"
     sandbox="allow-scripts"
   />
 );

@@ -1,15 +1,15 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Header = styled.header`
   display: flex;
   padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
-  background: ${props => props.theme.colors.dark};
+  background: ${(props) => props.theme.colors.dark};
   * {
-    color: ${props => props.theme.colors.textColor};
+    color: ${(props) => props.theme.colors.textColor};
   }
-`
+`;
 
 export const LogoContainer = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const LogoContainer = styled.div`
     }
     span {
       font-size: 0.9rem;
-      color: ${props => props.theme.colors.secondaryTextColor};
+      color: ${(props) => props.theme.colors.secondaryTextColor};
     }
   }
-`
+`;

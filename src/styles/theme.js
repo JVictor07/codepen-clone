@@ -4,6 +4,8 @@ const theme = {
     gray: "#5a6074",
     textColor: "#FFF",
     darkGray: "#333642",
+    lightGray: "#d5d7de",
+    activeGray: "#444857",
     secondaryTextColor: "#9b9dad",
   },
 };

@@ -207,4 +207,5 @@ body {
   animation-fill-mode: both;
 }
 `,
+  js: "",
 };

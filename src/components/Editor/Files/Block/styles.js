@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import { TabPanel } from "@reach/tabs";
 
 export const EditorFilesBlock = styled.div`
   width: 100%;
@@ -15,12 +16,17 @@ export const EditorFilesBlock = styled.div`
   &:last-of-type {
     margin-right: 0;
   }
-`
+`;
+
+export const EditorFilesBlockMobile = styled(TabPanel)`
+  width: 100%;
+  height: 100%;
+`;
 
 export const EditorFilesBlockHeader = styled.h2`
   height: 35px;
   font-weight: 500;
   font-size: 1.3rem;
-  color: ${props => props.theme.colors.textColor};
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-`
+  color: ${(props) => props.theme.colors.textColor};
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+`;

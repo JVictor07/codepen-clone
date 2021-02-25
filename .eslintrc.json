@@ -8,7 +8,8 @@
     "plugin:react/recommended",
     "airbnb",
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -28,6 +29,7 @@
         "endOfLine": "auto"
       }
     ],
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
@@ -36,6 +38,7 @@
           ".js"
         ]
       }
-    ]
+    ],
+    "import/prefer-default-export": "off"
   }
 }
